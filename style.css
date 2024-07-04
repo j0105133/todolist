@@ -1,14 +1,28 @@
 body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
-    background-image: url("images/images.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #ffe6f2; /* 연분홍색 배경 */
+    color: #333;
 }
 
+h1 {
+    text-align: center;
+    color: #d81b60;
+}
+#text-input {
+    width: 70%;
+    padding: 0.5em;
+    border-radius: 15px;
+    border: 2px solid #d81b60;
+    margin-right: 1em;
+}
 .container {
+    max-width: 600px;
+    margin: auto;
     background-color: white;
-    min-height: 100vh;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .task-area {
@@ -40,27 +54,51 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5em 0;
+    padding: 10px;
+    border-bottom: 1px solid #f2f2f2;
 }
-
+.task:last-child {
+    border-bottom: none;
+}
 .taskDone {
     text-decoration: line-through;
+    color: #777;
 }
 
-/* 추가됐습니다!!!!! */
 .task button {
     background: none;
     border: none;
+    color: #ff66cc;
+    font-size: 20px;
     cursor: pointer;
-    font-size: 1.2em;
-    margin-left: 0.5em;
-    color: #333;
 }
 
 .task button:hover {
-    color: #007bff;
+    color: #ff33aa;
 }
 
+.trash-btn {
+    color: #ff66cc; /* 기본 색상은 분홍색 */
+    background: none;
+    border: none;
+}
+
+.trash-btn:hover {
+    color: #ff33aa; /* 마우스를 올렸을 때 색상을 진한 분홍색으로 변경 */
+    transform: scale(1.1); /* 약간 확대 효과 */
+    transition: color 0.3s, transform 0.3s; /* 색상과 크기 변화에 애니메이션 효과 적용 */
+}
+.heart-trash {
+    color: #ff66cc; /* 기본 색상은 분홍색 */
+    background: none;
+    border: none;
+}
+
+.heart-trash:hover {
+    color: #ff33aa; /* 마우스를 올렸을 때 색상을 진한 분홍색으로 변경 */
+    transform: scale(1.1); /* 약간 확대 효과 */
+    transition: color 0.3s, transform 0.3s; /* 색상과 크기 변화에 애니메이션 효과 적용 */
+}
 .btn-secondary {
     color: white;
     background-color: #6c757d;
@@ -75,10 +113,102 @@ body {
     color: white;
     background-color: #dc3545;
 }
-.taskCheckedBg{
-    background-color: #f0f0f0;
-
+.taskCheckedBg {
+    background-color: #ffccf2; /* 매우 연한 분홍색 배경 */
 }
 .task-tabs div{
     cursor: pointer;
+}
+
+
+.input-area {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.input-area input {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #ff99cc; /* 연분홍색 테두리 */
+    border-radius: 5px;
+}
+
+
+#text-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.heart-btn {
+    background-color: #ff66cc; /* 진한 분홍색 */
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.heart-btn:hover {
+    background-color: #ff33aa;
+}
+
+.heart-btn:active {
+    transform: scale(0.9);
+}
+
+.heart-burst {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.heart-burst .heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #FFB6C1;
+    transform: rotate(45deg);
+    animation: burstAnimation 1s forwards;
+}
+
+.heart-burst .heart::before,
+.heart-burst .heart::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #FFB6C1;
+    border-radius: 50%;
+}
+
+.heart-burst .heart::before {
+    left: -10px;
+}
+
+.heart-burst .heart::after {
+    top: -10px;
+}
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+}
+
+@keyframes burstAnimation {
+    0% {
+        opacity: 1;
+        transform: rotate(45deg) translate(0, 0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(100px, -100px) scale(0);
+    }
 }

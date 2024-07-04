@@ -14,17 +14,19 @@
     <div class="container">
         <h1>TODO List</h1>
         <section class="input-area">
-            <input type="text" id="text-input"/>
-            <button id="add-btn">+</button>
-
-
+            <input type="text" id="text-input" placeholder="할 일을 입력해 주세요"/>
+            <button id="add-btn" class="heart-btn">❤</button>
         </section>
+        <div id="heart-burst" class="heart-burst"></div>
+
 
         <section class="task-area">
             <div class="task-tabs">
-                <div id="under-line"></div>
+                <div id="under-line">
+
+                </div>
                 <div id="all"> 
-                    all
+                    All
                 </div>
                 <div id="not-done"> 
                     Not Done
