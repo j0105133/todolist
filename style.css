@@ -1,7 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
-    background-color: #ffe6f2; /* 연분홍색 배경 */
+    background-color: #ffe6f2; 
     color: #333;
 }
 
@@ -78,26 +78,26 @@ h1 {
 }
 
 .trash-btn {
-    color: #ff66cc; /* 기본 색상은 분홍색 */
+    color: #ff66cc; 
     background: none;
     border: none;
 }
 
 .trash-btn:hover {
-    color: #ff33aa; /* 마우스를 올렸을 때 색상을 진한 분홍색으로 변경 */
-    transform: scale(1.1); /* 약간 확대 효과 */
-    transition: color 0.3s, transform 0.3s; /* 색상과 크기 변화에 애니메이션 효과 적용 */
+    color: #ff33aa; 
+    transform: scale(1.1); 
+    transition: color 0.3s, transform 0.3s;
 }
 .heart-trash {
-    color: #ff66cc; /* 기본 색상은 분홍색 */
+    color: #ff66cc; 
     background: none;
     border: none;
 }
 
 .heart-trash:hover {
-    color: #ff33aa; /* 마우스를 올렸을 때 색상을 진한 분홍색으로 변경 */
-    transform: scale(1.1); /* 약간 확대 효과 */
-    transition: color 0.3s, transform 0.3s; /* 색상과 크기 변화에 애니메이션 효과 적용 */
+    color: #ff33aa; 
+    transform: scale(1.1);
+    transition: color 0.3s, transform 0.3s; 
 }
 .btn-secondary {
     color: white;
@@ -114,7 +114,7 @@ h1 {
     background-color: #dc3545;
 }
 .taskCheckedBg {
-    background-color: #ffccf2; /* 매우 연한 분홍색 배경 */
+    background-color: #ffccf2; 
 }
 .task-tabs div{
     cursor: pointer;
@@ -129,7 +129,7 @@ h1 {
 .input-area input {
     width: 80%;
     padding: 10px;
-    border: 2px solid #ff99cc; /* 연분홍색 테두리 */
+    border: 2px solid #ff99cc; 
     border-radius: 5px;
 }
 
@@ -143,7 +143,7 @@ h1 {
 }
 
 .heart-btn {
-    background-color: #ff66cc; /* 진한 분홍색 */
+    background-color: #ff66cc; 
     color: white;
     font-size: 16px;
     border: none;
